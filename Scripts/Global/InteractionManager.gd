@@ -17,7 +17,6 @@ func _ready():
 	print("Good news: Player found")
 	DialogManager.started_dialog.connect(_hide_prompt)
 	DialogManager.finished_dialog.connect(_show_prompt)
-	
 	interaction_finished.connect(_on_interact_finished)
 
 func _input(event):

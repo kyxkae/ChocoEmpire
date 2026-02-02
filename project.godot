@@ -21,6 +21,8 @@ PlayerEconomy="*uid://b8cqfhjsikkxg"
 DialogManager="*uid://b7la68iurkcrg"
 InteractionManager="*uid://1u25k5pgpq1f"
 QuestManager="*uid://70tk8vaq6577"
+DateManager="*uid://bvflgx7edibjh"
+Global="*uid://cidpdbkgcdr2w"
 
 [dotnet]
 

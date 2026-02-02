@@ -4,7 +4,7 @@ class_name InteractionArea extends Area2D
 @onready var collision = $CollisionShape2D
 
 var interact: Callable = func():
-	print("Test")
+	pass
 
 func _on_body_entered(_body):
 	InteractionManager.register_area(self)

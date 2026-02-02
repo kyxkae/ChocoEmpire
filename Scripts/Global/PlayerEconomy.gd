@@ -1,9 +1,11 @@
 extends Node
 
-var current_money := 0
+var current_money : int: get = get_current_money, set = set_current_money
+signal money_changed
 
-func addMoney(money):
-	current_money += money
+func set_current_money(money_to_add: int):
+	current_money += money_to_add
+	money_changed.emit()
 
-func removeMoney(money):
-	current_money -= money
+func get_current_money():
+	return current_money

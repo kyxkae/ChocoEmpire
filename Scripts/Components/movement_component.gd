@@ -25,8 +25,11 @@ func _set_interact_animation(dir: Facing) -> void:
 		sprite.play(anim_name)
 
 func tick(_delta: float) -> void:
-	if body == null:
+	if DialogManager.is_dialog_active:
 		return
+	
+	if body == null:
+		assert(false, "No CharacterBody2D found")
 	
 	body.velocity.x = direction.x * speed
 	body.velocity.y = direction.y * speed
