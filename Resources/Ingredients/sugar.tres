@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bilbhs1i21pcp"]
+[gd_resource type="Resource" script_class="Ingredient" format=3 uid="uid://dn04cfdxcik0v"]
 
-[ext_resource type="Script" uid="uid://bp4k3l5xo1fdh" path="res://Scripts/ResourceBase/Item.gd" id="1_fr7gr"]
+[ext_resource type="Script" uid="uid://bt7jaoevr67bn" path="res://Scripts/ResourceBase/Ingredent.gd" id="1_yqvbc"]
 [ext_resource type="Texture2D" uid="uid://4va5gpthg3ir" path="res://Assets/Sprites/IngredientSprites/sugar_ingredient.png" id="2_2ia21"]
 
 [resource]
-script = ExtResource("1_fr7gr")
+script = ExtResource("1_yqvbc")
 name = "Sugar"
 texture = ExtResource("2_2ia21")
-metadata/_custom_type_script = "uid://bp4k3l5xo1fdh"
+metadata/_custom_type_script = "uid://bt7jaoevr67bn"
