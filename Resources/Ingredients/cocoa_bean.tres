@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Ingredient" format=3 uid="uid://bukpvgwbbt2hn"]
+
+[ext_resource type="Script" uid="uid://bt7jaoevr67bn" path="res://Scripts/ResourceBase/Ingredent.gd" id="1_6ysew"]
+[ext_resource type="Texture2D" uid="uid://x2ypkwkau8jg" path="res://Assets/Sprites/IngredientSprites/Cocoa_ingredient.png" id="2_3q2ny"]
+
+[resource]
+script = ExtResource("1_6ysew")
+name = "Cocoa Bean"
+texture = ExtResource("2_3q2ny")
+metadata/_custom_type_script = "uid://bt7jaoevr67bn"

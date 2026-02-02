@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://1yeb5ixqjery"]
+
+[ext_resource type="Script" uid="uid://bhrco2xymtrl1" path="res://Scenes/Characters/npc_base.gd" id="1_44abh"]
+[ext_resource type="SpriteFrames" uid="uid://cni3ipjwwi72m" path="res://Resources/SpriteFrames/new_sprite_frames.tres" id="1_vndy5"]
+[ext_resource type="PackedScene" uid="uid://bix3k3g0ykm7x" path="res://Scenes/interaction_area.tscn" id="3_44abh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pjhyh"]
+radius = 124.004036
+
+[node name="npc_base" type="Node2D" unique_id=1312951388]
+script = ExtResource("1_44abh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1517952359]
+scale = Vector2(4.3, 4.3)
+sprite_frames = ExtResource("1_vndy5")
+animation = &"walk_down"
+
+[node name="InteractionArea" parent="." unique_id=1910713128 instance=ExtResource("3_44abh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=634977364]
+shape = SubResource("CircleShape2D_pjhyh")

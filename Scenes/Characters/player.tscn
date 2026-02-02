@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dih4osam61we4"]
+
+[ext_resource type="Script" uid="uid://b53ab3aq23fsb" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="SpriteFrames" uid="uid://cni3ipjwwi72m" path="res://Resources/SpriteFrames/new_sprite_frames.tres" id="2_vgqql"]
+[ext_resource type="Script" uid="uid://bsuivv6v1stcs" path="res://Scripts/Components/movement_component.gd" id="3_vgqql"]
+[ext_resource type="Script" uid="uid://c2ut8onwbfpqb" path="res://Scripts/Components/input_component.gd" id="4_fkybt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tx1dd"]
+radius = 20.0
+height = 82.0
+
+[node name="Player" type="CharacterBody2D" unique_id=984950847 groups=["player"]]
+collision_layer = 2
+script = ExtResource("1_cvnsp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=937642749]
+position = Vector2(4, -47)
+scale = Vector2(4.3, 4.3)
+sprite_frames = ExtResource("2_vgqql")
+animation = &"idle_down"
+autoplay = "idle_down"
+frame_progress = 0.8697657
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=262909750]
+position = Vector2(4, -39)
+shape = SubResource("CapsuleShape2D_tx1dd")
+
+[node name="MovementComponent" type="Node" parent="." unique_id=1947399286 node_paths=PackedStringArray("body", "sprite")]
+unique_name_in_owner = true
+script = ExtResource("3_vgqql")
+body = NodePath("..")
+sprite = NodePath("../AnimatedSprite2D")
+speed = 130.0
+metadata/_custom_type_script = "uid://bsuivv6v1stcs"
+
+[node name="InputComponent" type="Node" parent="." unique_id=1638878950]
+unique_name_in_owner = true
+script = ExtResource("4_fkybt")
+metadata/_custom_type_script = "uid://c2ut8onwbfpqb"
