@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://1yeb5ixqjery"]
 
-[ext_resource type="Script" uid="uid://bhrco2xymtrl1" path="res://Scripts/npc_base.gd" id="1_44abh"]
+[ext_resource type="Script" uid="uid://bhrco2xymtrl1" path="res://Scripts/Character/npc_base.gd" id="1_44abh"]
 [ext_resource type="SpriteFrames" uid="uid://cni3ipjwwi72m" path="res://Resources/SpriteFrames/new_sprite_frames.tres" id="1_vndy5"]
-[ext_resource type="PackedScene" uid="uid://bix3k3g0ykm7x" path="res://Scenes/interaction_area.tscn" id="3_44abh"]
+[ext_resource type="PackedScene" uid="uid://bix3k3g0ykm7x" path="res://Scenes/UI/interaction_area.tscn" id="3_44abh"]
 [ext_resource type="Script" uid="uid://dlbrag8ewk8wv" path="res://Scripts/Components/dialog_component.gd" id="4_pjhyh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pjhyh"]
@@ -21,18 +21,11 @@ animation = &"walk_down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=634977364]
 shape = SubResource("CircleShape2D_pjhyh")
 
-[node name="Label" type="Label" parent="." unique_id=950813396]
-offset_left = -7.0
-offset_top = -65.0
-offset_right = 7.0
-offset_bottom = -30.0
-theme_override_colors/font_color = Color(1, 0.003921569, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = "!"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="DialogCommponent" type="Node" parent="." unique_id=99784769]
 unique_name_in_owner = true
 script = ExtResource("4_pjhyh")
+dialog_type = 1
+initializer_name = "Joey Mew"
+interact_type = "Talk"
+lines = Array[String](["Welxome", "To ChocoEmpire"])
 metadata/_custom_type_script = "uid://dlbrag8ewk8wv"

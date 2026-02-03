@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogMessage" format=3 uid="uid://vic2mp5ynkfo"]
+
+[ext_resource type="Script" uid="uid://dun2ggbvsbi1w" path="res://Scripts/ResourceBase/DialogMessage.gd" id="1_12gen"]
+
+[resource]
+script = ExtResource("1_12gen")
+dialog_lines = Array[String](["Testing"])
+speaker_name = "Test Dummy"
+metadata/_custom_type_script = "uid://dun2ggbvsbi1w"

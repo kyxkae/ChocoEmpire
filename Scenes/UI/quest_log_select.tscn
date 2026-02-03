@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b0rmrndksr0lt"]
+
+[ext_resource type="Texture2D" uid="uid://cfj0lk4gtildq" path="res://Assets/UI/StatusIndicators/green_status.png" id="1_ipbao"]
+[ext_resource type="Theme" uid="uid://uke83pj80yvo" path="res://Assets/Themes/pixel.tres" id="1_mgq45"]
+[ext_resource type="Script" uid="uid://bb32aoqx6jwiv" path="res://Scenes/UI/quest_log_select.gd" id="1_w71s7"]
+[ext_resource type="FontFile" uid="uid://yn3y28h6k4r8" path="res://Assets/Fonta/boldspixels.ttf" id="3_w71s7"]
+
+[node name="quest_log_select" type="Control" unique_id=1040360228]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 150.0
+offset_bottom = 20.0
+grow_vertical = 2
+script = ExtResource("1_w71s7")
+
+[node name="Button" type="Button" parent="." unique_id=441381823]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 0
+offset_left = 30.0
+offset_top = 5.0
+offset_right = 176.0
+offset_bottom = 35.0
+theme = ExtResource("1_mgq45")
+theme_override_fonts/font = ExtResource("3_w71s7")
+text = "Tutorial Quest 1"
+icon_alignment = 1
+
+[node name="Statua_indicator" type="TextureRect" parent="." unique_id=1571030925]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("1_ipbao")
+expand_mode = 2
+stretch_mode = 5

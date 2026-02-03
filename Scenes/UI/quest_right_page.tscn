@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://gbmfh5no81j4"]
+
+[ext_resource type="Texture2D" uid="uid://c6xov4e8bbgog" path="res://icon.svg" id="1_edt3e"]
+[ext_resource type="Theme" uid="uid://uke83pj80yvo" path="res://Assets/Themes/pixel.tres" id="1_s4juk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edt3e"]
+draw_center = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s4juk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xv3pi"]
+
+[node name="quest_right_page" type="Panel" unique_id=1063671070]
+custom_minimum_size = Vector2(400, 0)
+offset_right = 400.0
+offset_bottom = 500.0
+theme = ExtResource("1_s4juk")
+theme_override_styles/panel = SubResource("StyleBoxFlat_edt3e")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1518440255]
+custom_minimum_size = Vector2(400, 0)
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -217.0
+offset_right = 217.0
+offset_bottom = 256.0
+grow_horizontal = 2
+theme_override_constants/separation = -11
+
+[node name="icon_and_name" type="MarginContainer" parent="VBoxContainer" unique_id=2003751178]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/icon_and_name" unique_id=447531370]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/icon_and_name/HBoxContainer" unique_id=1836184539]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("1_edt3e")
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/icon_and_name/HBoxContainer" unique_id=461080122]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_s4juk")
+
+[node name="Questname" type="Label" parent="VBoxContainer/icon_and_name/HBoxContainer" unique_id=281130189]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Tutorial quest 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 16
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=347662784]
+layout_mode = 2
+theme_override_constants/separation = 50
+theme_override_styles/separator = SubResource("StyleBoxEmpty_xv3pi")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=676573575]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = -10
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer" unique_id=84611224]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+theme = ExtResource("1_s4juk")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
+autowrap_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer" unique_id=1354522587]
+layout_mode = 2
+theme_override_constants/separation = 50
+theme_override_styles/separator = SubResource("StyleBoxEmpty_xv3pi")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=1686345274]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer2" unique_id=1673730585]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer/MarginContainer2/HBoxContainer" unique_id=1390260156]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxEmpty_xv3pi")
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer2/HBoxContainer" unique_id=235069167]
+layout_mode = 2
+text = "Daye Left: 10"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/MarginContainer2/HBoxContainer" unique_id=422685067]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_xv3pi")
+
+[node name="Label2" type="Label" parent="VBoxContainer/MarginContainer2/HBoxContainer" unique_id=2106259172]
+layout_mode = 2
+text = "   You need to make:
+BASIC CHOCOLATE BAR:
+      Quantity 1"

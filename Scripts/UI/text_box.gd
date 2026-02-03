@@ -14,11 +14,10 @@ var punctuation_time: float = 0.2
 
 signal finished_displaying
 
-func display_text(speaker_name:String, text_to_display: String):
-	text = text_to_display
-	npc_name = speaker_name
-	speaker.text = speaker_name
-	dialog_text.text = text_to_display
+func display_text(dialog_event: DialogEvent):
+	text = dialog_event.dialog_lines[dialog_event.line_index]
+	speaker.text = dialog_event.speaker_name
+	dialog_text.text = text
 	await resized
 	custom_minimum_size.x =min(size.x, MAX_WIDTH)
 	

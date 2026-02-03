@@ -1,9 +1,10 @@
 class_name DialogCommponent
 extends Node
 
-@export var dialog_type: DIALOG_TYPE
 @export var initializer_name: String = "NPC"
 @export var interact_type: String = "Interact"
-@export var lines : Array[String] = ["No Dialog set","Test"]
+@export var lines: Array[String]
 
-enum DIALOG_TYPE {QUEST, CHAT}
+@export var text :String
+var options: Array[DialogOptions]
+var is_last_line: bool

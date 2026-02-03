@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://cx0pt5rk6460q"]
+
+[ext_resource type="Script" uid="uid://bneoixqpdybe8" path="res://Scripts/ResourceBase/Quest.gd" id="1_5ia7l"]
+[ext_resource type="Resource" uid="uid://teh3y7b8k7ff" path="res://Resources/Products/Basic_Chocolate_bar.tres" id="1_6ktsh"]
+
+[resource]
+script = ExtResource("1_5ia7l")
+quest_name = "Tutorial Quest"
+quest_Description = "Welcome to Choco Empire!"
+quest_id = 1
+quest_task = ExtResource("1_6ktsh")
+quest_task_quantity = 1
+days_to_be_completed = 999
+metadata/_custom_type_script = "uid://bneoixqpdybe8"

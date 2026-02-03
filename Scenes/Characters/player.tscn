@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dih4osam61we4"]
 
-[ext_resource type="Script" uid="uid://b53ab3aq23fsb" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://b53ab3aq23fsb" path="res://Scripts/Character/player.gd" id="1_cvnsp"]
 [ext_resource type="SpriteFrames" uid="uid://cni3ipjwwi72m" path="res://Resources/SpriteFrames/new_sprite_frames.tres" id="2_vgqql"]
 [ext_resource type="Script" uid="uid://bsuivv6v1stcs" path="res://Scripts/Components/movement_component.gd" id="3_vgqql"]
 [ext_resource type="Script" uid="uid://c2ut8onwbfpqb" path="res://Scripts/Components/input_component.gd" id="4_fkybt"]

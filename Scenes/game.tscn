@@ -1,11 +1,23 @@
 [gd_scene format=3 uid="uid://b3ci1pjh4ls8s"]
 
-[ext_resource type="Script" uid="uid://o531mpel82kc" path="res://Scripts/game.gd" id="1_ebmjs"]
 [ext_resource type="PackedScene" uid="uid://dih4osam61we4" path="res://Scenes/Characters/player.tscn" id="2_qxrlw"]
+[ext_resource type="Script" uid="uid://dohili1reyb8a" path="res://Scripts/ResourceBase/DialogEvent.gd" id="3_3dryh"]
 [ext_resource type="PackedScene" uid="uid://1yeb5ixqjery" path="res://Scenes/Characters/npc_base.tscn" id="3_wrm1d"]
+[ext_resource type="Script" uid="uid://dun2ggbvsbi1w" path="res://Scripts/ResourceBase/DialogMessage.gd" id="4_3dryh"]
+
+[sub_resource type="Resource" id="Resource_wowpa"]
+script = ExtResource("4_3dryh")
+dialog_lines = Array[String](["Testing"])
+speaker_name = "Test Dummy"
+metadata/_custom_type_script = "uid://dun2ggbvsbi1w"
+
+[sub_resource type="Resource" id="Resource_3dryh"]
+script = ExtResource("4_3dryh")
+dialog_lines = Array[String](["This is a player"])
+speaker_name = "Player"
+metadata/_custom_type_script = "uid://dun2ggbvsbi1w"
 
 [node name="Game" type="Node2D" unique_id=267147030]
-script = ExtResource("1_ebmjs")
 
 [node name="Player" parent="." unique_id=984950847 instance=ExtResource("2_qxrlw")]
 z_index = 10
@@ -16,8 +28,6 @@ safe_margin = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1248266494]
 
-[node name="npc_base2" parent="." unique_id=2106798125 instance=ExtResource("3_wrm1d")]
-position = Vector2(191, 361)
-
 [node name="npc_base" parent="." unique_id=1312951388 instance=ExtResource("3_wrm1d")]
-position = Vector2(714, 339)
+position = Vector2(580, 372)
+dialog_events = Array[ExtResource("3_3dryh")]([SubResource("Resource_wowpa"), SubResource("Resource_3dryh")])

@@ -1,17 +1,17 @@
-[gd_scene format=3 uid="uid://6ltdngpbyder"]
+[gd_scene format=3 uid="uid://dpbxhkrpr442o"]
 
-[ext_resource type="Script" uid="uid://lo0flr8ujf55" path="res://Scripts/text_box.gd" id="1_ot2p7"]
-[ext_resource type="Texture2D" uid="uid://uqwqrbg8f0q0" path="res://Assets/UI/text_box.png" id="2_w6krc"]
-[ext_resource type="FontFile" uid="uid://yn3y28h6k4r8" path="res://Assets/Fonta/boldspixels.ttf" id="3_8gqem"]
+[ext_resource type="Script" uid="uid://lo0flr8ujf55" path="res://Scripts/UI/text_box.gd" id="1_jdxvy"]
+[ext_resource type="Texture2D" uid="uid://uqwqrbg8f0q0" path="res://Assets/UI/text_box.png" id="2_db2j8"]
+[ext_resource type="FontFile" uid="uid://yn3y28h6k4r8" path="res://Assets/Fonta/boldspixels.ttf" id="3_8r802"]
 
 [node name="TextBox" type="MarginContainer" unique_id=685819209]
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_ot2p7")
+script = ExtResource("1_jdxvy")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=280401061]
 layout_mode = 2
-texture = ExtResource("2_w6krc")
+texture = ExtResource("2_db2j8")
 region_rect = Rect2(0, 0, 48, 48)
 patch_margin_left = 16
 patch_margin_top = 16
@@ -31,13 +31,13 @@ layout_mode = 2
 [node name="Speaker" type="Label" parent="MarginContainer/VBoxContainer" unique_id=435365740]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_8gqem")
+theme_override_fonts/font = ExtResource("3_8r802")
 theme_override_font_sizes/font_size = 24
 
 [node name="dialog_text" type="Label" parent="MarginContainer/VBoxContainer" unique_id=261956812]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_8gqem")
+theme_override_fonts/font = ExtResource("3_8r802")
 text = "test"
 vertical_alignment = 1
 
