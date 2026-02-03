@@ -60,7 +60,7 @@ func _unhandled_input(event):
 			current_event_index += 1
 		dialog_box.queue_free()
 		
-		if current_event_index >= current_event.dialog_lines.size():
+		if current_event_index >= events.size():
 			end_dialog()
 		else:
 			process_event()
