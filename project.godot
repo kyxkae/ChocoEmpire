@@ -38,6 +38,8 @@ project/assembly_name="Choco Empire"
 [global_group]
 
 player=""
+NPC=""
+Character=""
 
 [input]
 

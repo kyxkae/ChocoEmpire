@@ -15,6 +15,7 @@ var punctuation_time: float = 0.2
 signal finished_displaying
 
 func display_text(dialog_event: DialogEvent):
+	find_position(dialog_event.speaker_name)
 	text = dialog_event.dialog_lines[dialog_event.line_index]
 	speaker.text = dialog_event.speaker_name
 	dialog_text.text = text
@@ -46,6 +47,13 @@ func _display_letter():
 			timer.start(letter_time)
 	
 
+func find_position(_speaker: String):
+	for npc in get_tree().get_nodes_in_group("NPC"):
+		if _speaker == npc.name:
+			print("found")
+			position = npc.global_position
+	if _speaker == "Player":
+		position = get_tree().get_first_node_in_group("player").global_position + Vector2(0,-60 )
 
 func _on_letter_diaplay_timer_timeout():
 	_display_letter()

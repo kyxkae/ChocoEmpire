@@ -5,7 +5,9 @@ class_name DialogMessage
 @export var speaker_name: String = ""
 @export var line_index = 0
 
-
 func advance() -> bool:
 	line_index += 1
-	return line_index >= dialog_lines.size()
+	if line_index >= dialog_lines.size():
+		line_index = 0
+		return true
+	return false

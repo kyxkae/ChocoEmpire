@@ -1,8 +1,9 @@
 class_name NPC_Base
 extends Node2D
-@onready var dialog_commponent: DialogCommponent = %DialogCommponent
+
 @onready var sprite = $AnimatedSprite2D
 @onready var interaction_area = $InteractionArea
+@onready var player = get_tree().get_first_node_in_group("player")
 
 @export var dialog_events: Array[DialogEvent]
 
@@ -16,8 +17,6 @@ func _ready():
 
 func _on_interact():
 	if interaction_area.global_position.distance_to(global_position) < threshold:
-		print("Hidden labal")
-		print(dialog_commponent.lines[0])
 		DialogManager.start_dialog(dialog_events)
 		sprite.flip_h = true
 	else: 
@@ -29,8 +28,6 @@ func random_movement():
 	
 func set_up_npc():
 	interaction_area.interact = Callable(self, "_on_interact")
-	interaction_area.action_name = dialog_commponent.interact_type
-	npc_name = dialog_commponent.initializer_name 
 
 	if interaction_area.collision.shape is CircleShape2D:
 		threshold = interaction_area.collision.shape.radius
